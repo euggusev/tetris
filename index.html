@@ -1,0 +1,135 @@
+﻿<HTML>
+<HEAD>
+<TITLE>It is my tetris</TITLE>
+</HEAD>
+<BODY onkeydown="if (event.keyCode == 37){keyleft()};if (event.keyCode == 39){keyright()};if (event.keyCode == 38){keyrevers()}; if (event.keyCode == 40){keyunRevers()};if (event.keyCode == 32){clearInterval(intervalId1);time =50;keyspaceup()}; " onkeyup= "if (event.keyCode == 32){clearInterval(intervalId1);time = 500;keyspaceup();};  "   >
+<style>
+   .brd {
+    border: 4px double black; /* Параметры границы */
+    background: white; /* Цвет фона */
+	width: 400px;
+    position: absolute;
+	top: 15px;
+	border-color:#a5a5a5;
+	box-shadow: 3px 0 5px #628bff;
+   }
+   
+   .brd1 {
+    border: 0px double black; /* Параметры границы */
+    background: white; /* Цвет фона */
+
+	width: 560px;
+	height: 550px;
+	text-align: right;
+   }
+   
+      .brd2 {
+font-family: Arial, Helvetica, Verdana, sans-serif;
+font-size: 35px;
+color:#0078f3;
+text-shadow: 1px 1px 2px black, 0 0 1em #0078f3;;
+   }
+      .brd3 {
+    border: 4px double black; /* Параметры границы */
+    background: white; /* Цвет фона */
+	width: 150px;
+    position: absolute;
+	top: 15px;
+	left: 420px;
+	height: 497px;
+	border-color:#a5a5a5;
+	box-shadow: 3px 0 5px #628bff;
+   }
+   
+  </style>
+  
+<div class="brd1"><br><DIV class="brd3"><TABLE border="0px" id="table1" align="center"> 
+<TR ><TD align="center"><img id="button1" src="button_start.png" alt="START" onclick="intervalId1 = setInterval(goLinetwo,time);document.getElementById('button1').hidden=true;document.getElementById('button6').hidden=false;document.getElementById('button8').hidden=false;" height="70"><img id="button6" src="stop.png" alt="STOP" onclick="clearInterval(intervalId1);document.getElementById('button1').hidden=true;document.getElementById('button6').hidden=false;" height="70" hidden><br><br></tr>
+<TR ><TD align="center"><img id="button2" src="revers.png" alt="REVERS" onclick="linetwo.revers();document.getElementById('button2').hidden=true;document.getElementById('button3').hidden=false;" >  <img id="button3" src="revers.png" alt="REVERS" onclick="linetwo.unRevers();document.getElementById('button3').hidden=true;document.getElementById('button2').hidden=false;"  hidden><br><br></tr>
+<TR ><TD align="center"><img id="button4" src="left.png" alt="LEFT" onclick="linetwo.left()" height="50"><img id="button5" src="right.png" alt="RIGHT" onclick="linetwo.right()" height="50"><br><br></tr>
+<TR ><TD align="center"><img id="button7" src="next.png" alt="RIGHT"  height="15"></tr>
+<TR ><TD align="center" height="100"><img id="button8" src="three_line.png"  height="50" hidden></tr>
+<TR ><TD align="center" height="50"><img id="button9" src="points.png"  height="20" ></tr>
+ <TR ><TD align="center"><p class="brd2" id="points"></p></tr>
+ </table></div>   
+
+
+
+<div class="brd">
+<TABLE height="500" width="400" border="0px" id="table">
+
+<TR height="20" border="0px" id="0">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20" ><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+
+<TR height="20" border="0px" id="1">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="2">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="3">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="4">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="5">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="6">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="7">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="8">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="9">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="10">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="11">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="12">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="13">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+<TR height="20" border="0px" id="14">
+<TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20"><TD width="20">
+</TR>
+
+</TABLE>
+</div>
+</div>
+
+
+
+
+</BODY>
+<script>
+var intervalId1; 
+</script>
+<script src=alert.js></script>
+
+</HTML>
